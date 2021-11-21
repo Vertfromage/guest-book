@@ -57,7 +57,9 @@ const App = ({ contract, currentUser, nearConfig, wallet }) => {
   return (
     <main>
       <header>
+      <div className={'colored-div'}>
         <h1>NEAR Guest Book</h1>
+        </div>
         { currentUser
           ? <button onClick={signOut}>Log out</button>
           : <button onClick={signIn}>Log in</button>

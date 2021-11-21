@@ -6,9 +6,9 @@ export default function Form({ onSubmit, currentUser }) {
   return (
     <form onSubmit={onSubmit}>
       <fieldset id="fieldset">
-        <p>Sign the guest book, { currentUser.accountId }!</p>
+        <p>Sign my awesome guest book, { currentUser.accountId }!</p>
         <p className="highlight">
-          <label htmlFor="message">Message:</label>
+          <label htmlFor="message">Your awesome message:</label>
           <input
             autoComplete="off"
             autoFocus
@@ -17,7 +17,7 @@ export default function Form({ onSubmit, currentUser }) {
           />
         </p>
         <p>
-          <label htmlFor="donation">Donation (optional):</label>
+          <label htmlFor="donation">Donation (Please... I'm deserving!):</label>
           <input
             autoComplete="off"
             defaultValue={'0'}

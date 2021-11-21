@@ -4,14 +4,18 @@ import PropTypes from 'prop-types';
 export default function Messages({ messages }) {
   return (
     <>
-      <h2>Messages</h2>
+      <div className={'colored-div'}><h2>Messages</h2></div>
       {messages.map((message, i) =>
         // TODO: format as cards, add timestamp
+        <div className={'message-div'}>
         <p key={i} className={message.premium ? 'is-premium' : ''}>
-          <strong>{message.sender}</strong>:<br/>
-          {message.text}
+          <strong>{message.sender}:</strong><br/>
+          {message.text} <br/>
+          {message.time}
         </p>
+        </div>
       )}
+      
     </>
   );
 }
@@ -19,3 +23,4 @@ export default function Messages({ messages }) {
 Messages.propTypes = {
   messages: PropTypes.array
 };
+
