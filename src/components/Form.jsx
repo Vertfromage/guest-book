@@ -7,6 +7,7 @@ export default function Form({ onSubmit, currentUser }) {
     <form onSubmit={onSubmit}>
       <fieldset id="fieldset">
         <p>Sign my awesome guest book, { currentUser.accountId }!</p>
+        <p>Only the first message you send will be stored and displayed.</p>
         <p className="highlight">
           <label htmlFor="message">Your awesome message:</label>
           <input
